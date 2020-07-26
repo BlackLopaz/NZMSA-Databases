@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/nzmsa-mkmu260-server/databases/NZMSA_mkmu260_Databases",
+      "type": "mssql.azure",
+      "connectionId": "schoolSIMSConnection",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
