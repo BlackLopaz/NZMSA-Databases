@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -118,15 +118,17 @@ namespace NZMSA_mkmu260_Databases.Controllers
             con.Open();
             SqlCommand checkStudentId = new SqlCommand("SELECT * FROM Student WHERE studentId = studentId;", con);
             SqlDataReader rdr = checkStudentId.ExecuteReader();
-            con.Close();
+            
             if (rdr.HasRows)
             {
                 _context.Address.Add(address);
                 await _context.SaveChangesAsync();
+                con.Close();
                 return CreatedAtAction("GetAddress", new { id = address.addressId }, address);
             }
             else
             {
+                con.Close();
                 return NotFound();
             }
         }
@@ -141,9 +143,9 @@ namespace NZMSA_mkmu260_Databases.Controllers
             con.Open();
             SqlCommand checkStudentId = new SqlCommand("SELECT * FROM Address WHERE studentId = studentId", con);
             SqlDataReader rdr = checkStudentId.ExecuteReader();
-            con.Close();
             if (!rdr.HasRows)
             {
+                con.Close();
                 return NotFound();
             }
 
@@ -154,7 +156,7 @@ namespace NZMSA_mkmu260_Databases.Controllers
                     address.addressId = rdr.GetInt32(0);
                 }
             }
-
+            con.Close();
             if (studentId != address.studentId)
             {
                 return BadRequest();
