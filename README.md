@@ -19,3 +19,10 @@ Notes: After many many hours of trying, the API method that changes the address 
 I decided to not make anything Required in the Address table as everything would be required if an address is being input, otherwise there would be no point in inputting anything. The user may also only want to share partial information such as their city or suburb rather than their full address.
 
 I also decided to make Street Number a string due to apartments, sublets etc where the address number isn't just a number. E.g. "12A" or "Floor 12 room 2"
+
+Azure Database:
+https://portal.azure.com/#@UOA.onmicrosoft.com/resource/subscriptions/46bb0964-8674-4d46-a85a-856cc7cb0a82/resourceGroups/MSA_mkmu260/providers/Microsoft.Sql/servers/nzmsa-mkmu260-server/databases/NZMSA_mkmu260_Databases/overview
+
+https://portal.azure.com/#@UOA.onmicrosoft.com/resource/subscriptions/46bb0964-8674-4d46-a85a-856cc7cb0a82/resourceGroups/MSA_mkmu260/providers/Microsoft.Sql/servers/nzmsa-mkmu260-server/overview
+
+http://msa-mkmu260-databases.azurewebsites.net
