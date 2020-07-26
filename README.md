@@ -17,3 +17,5 @@ Notes: After many many hours of trying, the API method that changes the address 
 ![Swagger UI Screenshot](https://github.com/BlackLopaz/NZMSA-Databases/blob/master/NZMSA-Images/Screenshot%20(1854).png)
 
 I decided to not make anything Required in the Address table as everything would be required if an address is being input, otherwise there would be no point in inputting anything. The user may also only want to share partial information such as their city or suburb rather than their full address.
+
+I also decided to make Street Number a string due to apartments, sublets etc where the address number isn't just a number. E.g. "12A" or "Floor 12 room 2"
